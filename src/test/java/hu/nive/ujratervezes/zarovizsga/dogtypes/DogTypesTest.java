@@ -20,8 +20,8 @@ public class DogTypesTest {
             MariaDbDataSource dataSource;
             dataSource = new MariaDbDataSource();
             dataSource.setUrl("jdbc:mariadb://localhost:3306/employees?useUnicode=true");
-            dataSource.setUser("employees");
-            dataSource.setPassword("employees");
+            dataSource.setUser("root");
+            dataSource.setPassword("root74");
 
             Flyway flyway = Flyway.configure().dataSource(dataSource).load();
 
