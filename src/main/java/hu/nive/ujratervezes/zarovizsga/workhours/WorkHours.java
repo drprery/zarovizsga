@@ -15,13 +15,15 @@ public class WorkHours {
             String line = "";
             int minHours = Integer.MAX_VALUE;
             String minWorker = null;
+            int hour = 0;
 
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(",");
-                int hour = Integer.parseInt(parts[HOUR]);
+                hour = Integer.parseInt(parts[HOUR]);
 
                 if (hour < minHours) {
                     minWorker = parts[NAME] + ": " + parts[DATE];
+                    minHours = hour;
                 }
             }
 
